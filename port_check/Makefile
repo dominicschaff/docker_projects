@@ -1,6 +1,11 @@
 build:
 	docker build --tag port_check .
 
+build-multiarch:
+	docker buildx build --push \
+		--platform linux/arm64/v8,linux/amd64 \
+		--tag schaffdev/port_check:buildx-latest .
+
 run:
 	docker run \
 		-e CHECK_HOST=$(CHECK_HOST) \
