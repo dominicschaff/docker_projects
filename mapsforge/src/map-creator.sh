@@ -12,7 +12,7 @@
 
 [ $MAP_CREATION ] || MAP_CREATION="true"
 [ $POI_CREATION ] || POI_CREATION="true"
-[ $GRAPH_CREATION ] || GRAPH_CREATION="false"
+[ $GRAPH_CREATION ] || GRAPH_CREATION="true"
 
 [ $DATA_PATH ] || DATA_PATH="$HOME/mapsforge/data"
 [ $MAPS_PATH ] || MAPS_PATH="$HOME/mapsforge/maps"

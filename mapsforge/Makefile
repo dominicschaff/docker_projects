@@ -1,4 +1,4 @@
-args = run -it -v "${shell pwd}/mapsforge:/root/mapsforge" -e JAVACMD_OPTIONS=-Xmx12G -e GRAPH_CREATION=true -e POI_CREATION=false -e MAP_CREATION=false mapsforge:latest
+args = run -it -v "${shell pwd}/mapsforge:/root/mapsforge" -e JAVACMD_OPTIONS=-Xmx12G mapsforge:latest
 
 build:
 	docker build --tag mapsforge .
