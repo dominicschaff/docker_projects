@@ -12,6 +12,14 @@ run-sa:
 run-nam:
 	docker ${args} africa/namibia ram en
 
+run-bot:
+	docker ${args} africa/botswana ram en
+
+run-zim:
+	docker ${args} africa/zimbabwe ram en
+
+maps: run-sa run-nam run-bot run-zim
+
 clean:
 	sudo rm -rf mapsforge
 
