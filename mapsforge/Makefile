@@ -6,24 +6,30 @@ build:
 run-shell:
 	docker ${args} bash
 
-run-sa:
-	docker ${args} africa/south-africa-and-lesotho ram en
-
-run-nam:
-	docker ${args} africa/namibia ram en
-
-run-bot:
-	docker ${args} africa/botswana ram en
-
-run-zim:
-	docker ${args} africa/zimbabwe ram en
-
 run-eu:
 	docker ${args} europe/italy ram en
 	docker ${args} europe/netherlands ram en
 	docker ${args} europe/germany ram en
+	docker ${args} europe/portugal ram en
+	docker ${args} europe/luxembourg ram en
 
-maps: run-sa run-nam run-bot run-zim
+run-africa:
+	docker ${args} africa/south-africa-and-lesotho ram en
+	docker ${args} africa/namibia ram en
+	docker ${args} africa/botswana ram en
+	docker ${args} africa/zimbabwe ram en
+	docker ${args} africa/madagascar ram en
+	docker ${args} africa/mauritius ram en
+	docker ${args} africa/mozambique ram en
+	docker ${args} africa/swaziland ram en
+
+run-australia:
+	docker ${args} australia-oceania/australia ram en
+
+run-other:
+	docker ${args} antartica ram en
+
+maps: run-africa run-australia run-other run-eu
 
 clean:
 	sudo rm -rf mapsforge
