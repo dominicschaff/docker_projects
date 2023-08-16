@@ -15,7 +15,7 @@ RUN curl -L 'https://github.com/mapsforge/mapsforge-creator/archive/refs/heads/m
       && mkdir -p /root/programs/graphhopper/ \
       && curl 'https://repo1.maven.org/maven2/com/graphhopper/graphhopper-web/5.3/graphhopper-web-5.3.jar' -o /root/programs/graphhopper/graphhopper-web-1.0.jar \
       && mkdir -p /root/.openstreetmap/osmosis/plugins/ \
-      && curl -L 'https://repo1.maven.org/maven2/org/mapsforge/mapsforge-poi-writer/0.19.0/mapsforge-poi-writer-0.19.0-jar-with-dependencies.jar' -o /root/.openstreetmap/osmosis/plugins/mapsforge-poi-writer-0.19.0-jar-with-dependencies.jar \
-      && curl -L 'https://repo1.maven.org/maven2/org/mapsforge/mapsforge-map-writer/0.19.0/mapsforge-map-writer-0.19.0-jar-with-dependencies.jar' -o /root/.openstreetmap/osmosis/plugins/mapsforge-map-writer-0.19.0-jar-with-dependencies.jar
+      && curl -L 'https://repo1.maven.org/maven2/org/mapsforge/mapsforge-poi-writer/0.20.0/mapsforge-poi-writer-0.20.0-jar-with-dependencies.jar' -o /root/.openstreetmap/osmosis/plugins/mapsforge-poi-writer-0.20.0-jar-with-dependencies.jar \
+      && curl -L 'https://repo1.maven.org/maven2/org/mapsforge/mapsforge-map-writer/0.20.0/mapsforge-map-writer-0.20.0-jar-with-dependencies.jar' -o /root/.openstreetmap/osmosis/plugins/mapsforge-map-writer-0.20.0-jar-with-dependencies.jar
 
 ENTRYPOINT ["bash", "/mapsforge/map-creator.sh"]

@@ -1,4 +1,4 @@
-args = run -it -v "${shell pwd}/mapsforge:/root/mapsforge" -e JAVACMD_OPTIONS=-Xmx32G mapsforge:latest
+args = run -it -v "${shell pwd}/mapsforge:/root/mapsforge" -e JAVACMD_OPTIONS=-Xmx42G mapsforge:latest
 
 build:
 	docker build --tag mapsforge:latest .
@@ -17,6 +17,11 @@ run-bot:
 
 run-zim:
 	docker ${args} africa/zimbabwe ram en
+
+run-eu:
+	docker ${args} europe/italy ram en
+	docker ${args} europe/netherlands ram en
+	docker ${args} europe/germany ram en
 
 maps: run-sa run-nam run-bot run-zim
 
