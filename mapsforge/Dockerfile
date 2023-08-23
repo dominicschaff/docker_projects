@@ -3,6 +3,7 @@ from ubuntu:latest
 ENV OSMOSIS_HOME /usr
 ENV JAVACMD_OPTIONS -Xmx8G
 ENV TAG_VALUES true
+ENV GRAPH_CREATION false
 
 RUN apt update \
       && apt install -y osmosis zip curl wget python3 gdal-bin \

@@ -27,7 +27,7 @@ run-australia:
 	docker ${args} australia-oceania/australia ram en
 
 run-other:
-	docker ${args} antartica ram en
+	docker ${args} antarctica ram en
 
 maps: run-africa run-australia run-other run-eu
 
