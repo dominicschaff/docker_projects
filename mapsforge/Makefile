@@ -11,7 +11,8 @@ run-eu:
 	docker ${args} europe/netherlands ram en
 	docker ${args} europe/germany ram en
 	docker ${args} europe/portugal ram en
-	docker ${args} europe/luxembourg ram en
+	docker ${args} europe/italy/centro ram en
+	docker ${args} europe/netherlands/noord-holland ram en
 
 run-africa:
 	docker ${args} africa/south-africa-and-lesotho ram en
@@ -37,4 +38,3 @@ clean:
 push:
 	docker tag mapsforge:latest schaffdev/mapsforge:latest
 	docker push schaffdev/mapsforge:latest
-
